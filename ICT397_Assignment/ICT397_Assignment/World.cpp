@@ -10,7 +10,6 @@ World::World(){
 
 void World::RunGame(int* argc, char* argv[]){
 	graphic_handler->CreateWindow(screen_width, screen_height, "Grid Grunt", argc, argv);
-	game_done = false;
 }
 
 bool World::SetOpenGLGraphics(){
@@ -20,8 +19,4 @@ bool World::SetOpenGLGraphics(){
 	}
 
 	return true;
-}
-
-void World::SetScreen(int width, int height){
-	glutReshapeWindow(width, height);
 }

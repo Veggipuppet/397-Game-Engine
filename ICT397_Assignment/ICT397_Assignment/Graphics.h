@@ -7,22 +7,30 @@ class Graphics{
 
 		virtual void CreateWindow(int width, int height, char* window_name, int* argc, char* argv[]) = 0;
 		virtual void DestroyWindow(int width, int height) = 0;
-
+		
 	protected:
-		int screen_width, screen_height;
+		static int screen_width, screen_height;
 
 	//virtual bool renderTriangleStrip(Vertices* v);
 	//virtual bool renderModel(Model* m);
 };
 
+
+
 class OpenGL : public Graphics{
 	void CreateWindow(int width, int height, char* window_name, int* argc, char* argv[]);
 	void DestroyWindow(int width, int height);
 
+	public: 
+
+
 	private: 
 		static void Initialize();
 		static void Display();
+		static void Reshape(int width, int height);
 };
+
+
 
 class DirectX : public Graphics{
 	void CreateWindow(int width, int height, char* window_name, int* argc, char* argv[]){};

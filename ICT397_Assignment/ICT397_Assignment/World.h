@@ -25,7 +25,6 @@ class World{
 
 		// graphics
 		bool SetOpenGLGraphics();
-		void SetScreen(int width, int height);
 
 
 		// initialize terrai, load objects and put in container
